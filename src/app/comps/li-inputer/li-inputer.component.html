@@ -1,0 +1,45 @@
+<p>li-inputer works!</p>
+
+<div class="flex">
+    <div class="flex-row">
+        <input class="flex-button" #myThing [value]="myCalculation" (keyup)='onkeyup(myThing.value)' (keypress)='onkeypress($event.key)'/>
+    </div>
+    <div class="flex-row">
+        <button #toAdd class="flex-button" (click)='onOperator(toAdd.innerText)'>+</button>
+        <button #myNinus class="flex-button" (click)='onOperator(myNinus.innerText)'>-</button>
+        <button #myMulti class="flex-button" (click)='onOperator(myMulti.innerText)'>*</button>
+        <button #myDivie class="flex-button" (click)='onOperator(myDivie.innerText)'>/</button>
+    </div>
+    <div class="flex-row">
+        <button #myNum1 class="flex-button" (click)='onOperator(myNum1.innerText)'>1</button>
+        <button #myNum2 class="flex-button" (click)='onOperator(myNum2.innerText)'>2</button>
+        <button #myNum3 class="flex-button" (click)='onOperator(myNum3.innerText)'>3</button>
+    </div>
+    <div class="flex-row">
+        <button #myNum4 class="flex-button" (click)='onOperator(myNum4.innerText)'>4</button>
+        <button #myNum5 class="flex-button" (click)='onOperator(myNum5.innerText)'>5</button>
+        <button #myNum6 class="flex-button" (click)='onOperator(myNum6.innerText)'>6</button>
+    </div>
+    <div class="flex-row">
+        <button #myNum7 class="flex-button" (click)='onOperator(myNum7.innerText)'>7</button>
+        <button #myNum8 class="flex-button" (click)='onOperator(myNum8.innerText)'>8</button>
+        <button #myNum9 class="flex-button" (click)='onOperator(myNum9.innerText)'>9</button>
+    </div>
+    <div class="flex-row">
+        <button #myNum0 class="flex-button" (click)='onOperator(myNum0.innerText)'>0</button>
+        <button #myDoct class="flex-button" (click)='onOperator(myDoct.innerText)'>.</button>
+        <button #myEqual class="flex-button" (click)='inputerFN(myThing.value)'>=</button>
+        <button #myBin class="flex-button" (click)='pushHist()'>↻</button>
+    </div>
+    <div>
+        <p>{{result}}</p>
+    </div>
+</div>
+
+<!-- <p #my>my-com works!</p>
+<input (ngModel)="my.innerHtml"/>
+<input [ngModel]="my.innerText"/>
+<input [(ngModel)]="my.innerText"/>
+
+​
+{{my}} -->
