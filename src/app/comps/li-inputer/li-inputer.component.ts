@@ -11,9 +11,9 @@ import { InputerService } from '../service/inputer.service';
 
 export class LiInputerComponent implements OnInit {
 
-  constructor(private iptSvc: InputerService) { 
+  constructor(private iptSvc: InputerService) {
     this.iptSvc.arrofARRS.push(this.iptSvc.inputsArr)
-    this.iptSvc.inputsArr=[]
+    this.iptSvc.inputsArr = []
   }
 
   ngOnInit(): void { }
@@ -24,8 +24,8 @@ export class LiInputerComponent implements OnInit {
   myCalculation: string = ' '
   result: string = ' '
   mySum: number = 0
-  mySum2: number = 0
-  
+
+
 
 
   @ViewChild('toAdd') AddButton: ElementRef
@@ -60,20 +60,12 @@ export class LiInputerComponent implements OnInit {
     this.result = this.myCalculation
   }
 
-
-
-  clearHistory() {
-    this.myCalculation = ' '
-    this.iptSvc.arrofARRS.push(this.iptSvc.inputsArr)
-    // this.iptSvc.inputsArr = []
-  }
-
-  pushHist(){
-    if(this.iptSvc.arrofARRS[this.iptSvc.arrofARRS.length-1].length>0){
-    this.iptSvc.arrofARRS.push(this.iptSvc.inputsArr)
-    this.iptSvc.inputsArr=[]
-    this.mySum2++
-  }
+  pushHist() {
+    if (this.iptSvc.arrofARRS[this.iptSvc.arrofARRS.length - 1].length > 0) {
+      this.iptSvc.arrofARRS.push(this.iptSvc.inputsArr)
+      this.iptSvc.inputsArr = []
+      this.iptSvc.mySum2++
+    }
   }
 
 
@@ -81,24 +73,18 @@ export class LiInputerComponent implements OnInit {
 
 
   inputerFN(newValue): void {
-    
+
+    console.log(newValue);
+
+
     this.mySum = eval(newValue);
     this.myCalculation += `=${this.mySum.toString()}`
     this.result = this.myCalculation
 
     this.myNum++
-    
-
-    this.iptSvc.arrofARRS[this.mySum2].push(this.myCalculation)
-    
-    console.log(this.iptSvc.inputsArr[this.mySum2]);
-    
 
 
-
-
-    console.log(newValue, this.myInput, this.iptSvc.arrofARRS);
-
+    this.iptSvc.arrofARRS[this.iptSvc.mySum2].push(this.myCalculation)
   }
 
 

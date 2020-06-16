@@ -1,0 +1,10 @@
+.home{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.comp{
+    margin: 10px;
+}

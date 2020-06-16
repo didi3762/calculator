@@ -4,25 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class InputerService {
-  
-
-  constructor() {  }
 
 
-  inputsSimanin:string[] = []
-  inputsArr:string[] = []
-  inputsArr3:string[] = []
-  arrofARRS:string[][] = []
+  constructor() { }
 
-  
-  
-  pushNewInput(ipt:string,arr:string[]){
-    arr.push(ipt)
-    this.arrofARRS.push(this.inputsArr)
-  }
-  dual:string[][] = [
-    ['we','are','the','chanmpons'],
-    ['welcome','are','the','avratechs'],
-    ['shukli','are','the','boo'],
-  ]
+     inputsArr: string[] = []
+    arrofARRS: string[][] = []
+    mySum2: number = 0
+
+
 }

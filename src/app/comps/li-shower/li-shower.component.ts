@@ -15,10 +15,14 @@ export class LiShowerComponent implements OnInit {
   }
 
   clearHistory(arr: string[]) {
+    
+    if(this.iptSvc.arrofARRS.length>1){
     const index = this.iptSvc.arrofARRS.indexOf(arr);
     if (index > -1) {
       this.iptSvc.arrofARRS.splice(index, 1);
+      this.iptSvc.mySum2--
     }
+  }
   }
 
 }

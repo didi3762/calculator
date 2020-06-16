@@ -1,6 +1,9 @@
-
-<ul *ngFor="let innerArr of iptSvc.arrofARRS">
-    <p>li-shower works!</p>
-    <li *ngFor="let x of innerArr" >{{x}}</li>
-    <button  class="flex-button" (click)='clearHistory(innerArr)'>🗑</button>
-</ul>
+<div>
+    <h2>show histori</h2>
+    <ul *ngFor="let innerArr of iptSvc.arrofARRS">
+        
+        <li *ngFor="let x of innerArr">{{x}}</li>
+        <button class="flex-button" (click)='clearHistory(innerArr)'>🗑</button>
+    </ul>
+    
+</div>

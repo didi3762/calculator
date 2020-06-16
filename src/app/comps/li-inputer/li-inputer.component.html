@@ -1,8 +1,7 @@
-<p>li-inputer works!</p>
-
 <div class="flex">
     <div class="flex-row">
-        <input class="flex-button" #myThing [value]="myCalculation" (keyup)='onkeyup(myThing.value)' (keypress)='onkeypress($event.key)'/>
+        <input class="flex-button" #myThing [value]="myCalculation" (keyup)='onkeyup(myThing.value)'
+            (keypress)='onkeypress($event.key)' />
     </div>
     <div class="flex-row">
         <button #toAdd class="flex-button" (click)='onOperator(toAdd.innerText)'>+</button>
@@ -32,14 +31,7 @@
         <button #myBin class="flex-button" (click)='pushHist()'>↻</button>
     </div>
     <div>
+        <h2>myResult:</h2>
         <p>{{result}}</p>
     </div>
 </div>
-
-<!-- <p #my>my-com works!</p>
-<input (ngModel)="my.innerHtml"/>
-<input [ngModel]="my.innerText"/>
-<input [(ngModel)]="my.innerText"/>
-
-​
-{{my}} -->

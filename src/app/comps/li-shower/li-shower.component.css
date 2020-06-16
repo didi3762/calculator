@@ -1,3 +1,7 @@
-ul{
-    border:5px solid blue
+div{
+    display: flex;
+    border:5px solid blue;
+    flex-direction: column;
 }
+
+

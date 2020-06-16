@@ -8,9 +8,9 @@ describe('LiInputerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LiInputerComponent ]
+      declarations: [LiInputerComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
