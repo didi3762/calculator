@@ -1,6 +1,6 @@
 <div class="flex">
     <div class="flex-row">
-        <input class="flex-button" #myThing [value]="myCalculation" (keyup)='onkeyup(myThing.value)'
+        <input class="flex-button" #myThing [(value)]="myCalculation" (keyup)='onkeyup(myThing.value)'
             (keypress)='onkeypress($event.key)' />
     </div>
     <div class="flex-row">

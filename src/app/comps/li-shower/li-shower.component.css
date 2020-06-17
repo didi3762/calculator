@@ -3,5 +3,13 @@ div{
     border:5px solid blue;
     flex-direction: column;
 }
+ul{
+    border:5px solid blue;  
+}
+.flex-button{
+    text-align: center;
+    display: flex;
+    /* width: 100%; */
+}
 
 
